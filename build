@@ -4,7 +4,6 @@ mkdir -p dist
 
 nasm -f elf64 -o dist/index.o src/index.asm
 
-# ld dist/index.o -lc -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o dist/index -O
-clang -Wall -nostartfiles -no-pie dist/index.o -Oz -o dist/index
+ld dist/index.o -lc -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o dist/index
 
 ./dist/index

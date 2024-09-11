@@ -13,4 +13,5 @@ _start:
     MOV rdx, as_len
     SYSCALL
 
+    ; loop forever
     JMP _start
